@@ -19,8 +19,10 @@ async function fetchPokemon(pokemon){
 async function showPokemon(pokemon){
     const data = await fetchPokemon(pokemon);
     const {name, id}= data;
+
     pokemonName.innerHTML = name;
     pokemonId.innerHTML = addZero(id);
+    pokemonImage.src = data['sprites']['other']['home']['front_default'];
 
     
 }

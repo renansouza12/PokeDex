@@ -83,11 +83,27 @@ body {
 .container .main .pokemon_id {
   font-size: 15rem;
   color: #e5e5e5;
+  opacity: 0.5;
+  font-weight: 700;
+  pointer-events: none;
+  user-select: none;
 }
 .container .main .about {
   position: absolute;
-  top: 60%;
-  right: 10%;
+  top: 10%;
+  right: 0%;
+  display: flex;
+  align-items: center;
+}
+.container .main .about .pokemon_informations .pokemon_name {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #f8f9fa;
+  font-weight: 700;
+}
+.container .main .about .pokemon_image {
+  width: 25rem;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
