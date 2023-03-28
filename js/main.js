@@ -18,7 +18,9 @@ async function fetchPokemon(pokemon){
 }
 async function showPokemon(pokemon){
     const data = await fetchPokemon(pokemon);
-    
+    const {name, id}= data;
+    pokemonName.innerHTML = name;
+    pokemonId.innerHTML = addZero(id);
 
     
 }
@@ -32,3 +34,6 @@ searchBtn.addEventListener('click',()=>{
     inputPokemon.value = '';
 })
 
+function addZero(id){
+    return id < 10 ? "#00" + id : id < 100 ? "#0" + id : id;
+}
