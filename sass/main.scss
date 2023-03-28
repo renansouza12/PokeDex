@@ -4,6 +4,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 body{
     background-color: base.$main;
@@ -16,14 +17,24 @@ body{
     width: 50%;
     .nav{
         padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+
+        h1{
+            color: base.$white;
+
+        }
         .search_box{
             width: 0%;
             position: relative;
-            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-            svg{
-                width: 30px;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265 , 1.55);
+
+            .fa-solid{
+                font-size: 1.5rem;
                 color: base.$white;
+                
             }
+
 
             .input_pokemon{
                 width: 100%;
@@ -37,9 +48,11 @@ body{
                 border-radius:3rem;
                 box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
                 backdrop-filter: blur(5px);
-                transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265 , 1.55);
             }   
-
+            .input_pokemon::placeholder{
+                color: base.$white;
+            }
             .btn{
                 background-color: transparent;
                 cursor: pointer;
@@ -56,13 +69,11 @@ body{
                 border-radius:50%;
                 box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
                 backdrop-filter: blur(5px);
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265 , 1.55);
+            
+              
             }
-            .cancel_btn{
-                opacity: 0;
-                position: absolute;
-                right: -10%;
-                top: 20%;
-            }
+          
           
         }
         .search_box.active{
