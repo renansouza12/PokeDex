@@ -75,5 +75,19 @@ body {
 .container .nav .search_box.active .input_pokemon.active {
   opacity: 1;
 }
+.container .main {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.container .main .pokemon_id {
+  font-size: 15rem;
+  color: #e5e5e5;
+}
+.container .main .about {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+}
 
 /*# sourceMappingURL=styles.css.map */
