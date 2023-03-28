@@ -24,9 +24,12 @@ async function showPokemon(pokemon){
     pokemonId.innerHTML = addZero(id);
     pokemonImage.src = data['sprites']['other']['home']['front_default'];
 
-    
 }
+searchBox.addEventListener('submit',(e)=>{
+    e.preventDefault();
 
+    showPokemon(inputPokemon.value.toLowerCase());
+})
 
 showPokemon('1')
 searchBtn.addEventListener('click',()=>{
@@ -37,5 +40,5 @@ searchBtn.addEventListener('click',()=>{
 })
 
 function addZero(id){
-    return id < 10 ? "#00" + id : id < 100 ? "#0" + id : id;
+    return id < 10 ? "#00" + id : id < 100 ? "#0" + id : id >= 100 ? '#' + id : id;
 }
