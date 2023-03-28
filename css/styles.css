@@ -7,10 +7,69 @@
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #74c69d;
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.container {
+  width: 50%;
+}
+.container .nav {
+  padding: 1rem 0;
+}
+.container .nav .search_box {
+  width: 0%;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .nav .search_box svg {
+  width: 30px;
+  color: #f8f9fa;
+}
+.container .nav .search_box .input_pokemon {
+  width: 100%;
+  opacity: 0;
+  outline: none;
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: #f8f9fa;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3rem;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  backdrop-filter: blur(5px);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .nav .search_box .btn {
+  background-color: transparent;
+  cursor: pointer;
+}
+.container .nav .search_box .search_btn {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: grid;
+  place-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  backdrop-filter: blur(5px);
+}
+.container .nav .search_box .cancel_btn {
+  opacity: 0;
+  position: absolute;
+  right: -10%;
+  top: 20%;
+}
+.container .nav .search_box.active {
+  width: 50%;
+}
+.container .nav .search_box.active .input_pokemon.active {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
