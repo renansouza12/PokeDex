@@ -144,19 +144,19 @@ body {
         display: flex;
         justify-content: space-between;
         color: base.$white;
-        font-size: 3rem;
+        font-size: 2rem;
         cursor: pointer;
-        transform: translateY(-50px);
+        transform: translateY(-20px);
 
         .arrow_prev{
             @include theme();
-            height: 5rem;
-            width: 5rem;
+            height: 4rem;
+            width: 4rem;
         }
         .arrow_next{
             @include theme();
-            height: 5rem;
-            width: 5rem;
+            height: 4rem;
+            width: 4rem;
         }
     }
 }
