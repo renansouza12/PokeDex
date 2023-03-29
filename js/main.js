@@ -28,11 +28,11 @@ async function fetchPokemon(pokemon){
     }
     else{
         pokemonId.innerHTML = 'Not Found 😴'
-        pokemonId.style.fontSize = '11rem';
+        pokemonId.style.fontSize = '9rem';
         pokemonImage.style.display = 'none';
         pokemonInfo.style.display = 'none';  
         pokemonPrev.style.opacity = '0';
-        pokemonNext.style.transform = 'translateY(-25rem)';
+        pokemonNext.style.transform = 'translateY(-5rem)';
         
     }
    
