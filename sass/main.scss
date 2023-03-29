@@ -119,6 +119,19 @@ body {
                     color: base.$white;
                     font-weight: 700;
                 }
+                .pokemon_skills{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    text-align: center;
+                    font-weight:700;
+                    color: base.$white;
+                    p{
+                        margin-top: 1rem;
+                        font-weight: 400;
+                    }
+                }
+
             }
 
             .pokemon_image{

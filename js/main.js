@@ -7,8 +7,9 @@ const inputPokemon = document.querySelector('.input_pokemon');
 const pokemonId = document.querySelector('.pokemon_id');
 const pokemonName = document.querySelector('.pokemon_name');
 const pokemonImage = document.querySelector('.pokemon_image');
-
-
+const pokemonHeight = document.querySelector('.pokemon_height');
+const pokemonWeight = document.querySelector('.pokemon_weight');
+const pokemonAbility = document.querySelector('.pokemon_ability');
 
 
 async function fetchPokemon(pokemon){
@@ -17,12 +18,17 @@ async function fetchPokemon(pokemon){
     return data;
 }
 async function showPokemon(pokemon){
+
     const data = await fetchPokemon(pokemon);
-    const {name, id}= data;
+    const {name, id, height, weight}= data;
 
     pokemonName.innerHTML = name;
     pokemonId.innerHTML = addZero(id);
+    pokemonHeight.innerHTML = height;
+    pokemonWeight.innerHTML = weight;
+
     pokemonImage.src = data['sprites']['other']['home']['front_default'];
+    pokemonAbility.innerHTML = data['abilities']['0']   ['ability']['name'];
 
 }
 searchBox.addEventListener('submit',(e)=>{
@@ -31,7 +37,8 @@ searchBox.addEventListener('submit',(e)=>{
     showPokemon(inputPokemon.value.toLowerCase());
 })
 
-showPokemon('1')
+showPokemon('1');
+
 searchBtn.addEventListener('click',()=>{
     icon.classList.toggle('fa-x')
     searchBox.classList.toggle('active');

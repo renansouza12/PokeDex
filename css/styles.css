@@ -101,6 +101,18 @@ body {
   color: #f8f9fa;
   font-weight: 700;
 }
+.container .main .about .pokemon_informations .pokemon_skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: #f8f9fa;
+}
+.container .main .about .pokemon_informations .pokemon_skills p {
+  margin-top: 1rem;
+  font-weight: 400;
+}
 .container .main .about .pokemon_image {
   width: 25rem;
   height: auto;
