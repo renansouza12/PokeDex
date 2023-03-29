@@ -82,6 +82,7 @@ body {
 }
 .container .main .pokemon_id {
   font-size: 15rem;
+  text-align: center;
   color: #e5e5e5;
   opacity: 0.5;
   font-weight: 700;

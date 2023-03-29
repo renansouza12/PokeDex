@@ -10,15 +10,27 @@ const pokemonImage = document.querySelector('.pokemon_image');
 const pokemonHeight = document.querySelector('.pokemon_height');
 const pokemonWeight = document.querySelector('.pokemon_weight');
 const pokemonAbility = document.querySelector('.pokemon_ability');
-
+const pokemonInfo = document.querySelector('.pokemon_informations');
 
 async function fetchPokemon(pokemon){
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-    const data = await response.json();
-    return data;
+    if(response.status == 200){
+        const data = await response.json();
+         pokemonImage.style.display = 'block';
+         pokemonInfo.style.display = 'block';  
+        return data;
+       
+    }
+    else{
+        pokemonId.innerHTML = 'Not Found 😴'
+        pokemonImage.style.display = 'none';
+        pokemonInfo.style.display = 'none';  
+
+    }
+   
 }
 async function showPokemon(pokemon){
-
+    pokemonName.innerHTML = 'Loading...'
     const data = await fetchPokemon(pokemon);
     const {name, id, height, weight}= data;
 
@@ -28,7 +40,7 @@ async function showPokemon(pokemon){
     pokemonWeight.innerHTML = weight;
 
     pokemonImage.src = data['sprites']['other']['home']['front_default'];
-    pokemonAbility.innerHTML = data['abilities']['0']   ['ability']['name'];
+    pokemonAbility.innerHTML = data['abilities']['0']['ability']['name'];
 
 }
 searchBox.addEventListener('submit',(e)=>{
