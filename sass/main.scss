@@ -133,6 +133,7 @@ body {
             }
 
             .pokemon_image{
+                user-select: none;
                 width: 25rem;
                 height: auto;
             }
@@ -147,12 +148,12 @@ body {
         cursor: pointer;
         transform: translateY(-50px);
 
-        .arrow_left{
+        .arrow_prev{
             @include theme();
             height: 5rem;
             width: 5rem;
         }
-        .arrow_right{
+        .arrow_next{
             @include theme();
             height: 5rem;
             width: 5rem;

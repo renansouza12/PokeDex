@@ -11,6 +11,8 @@ const pokemonHeight = document.querySelector('.pokemon_height');
 const pokemonWeight = document.querySelector('.pokemon_weight');
 const pokemonAbility = document.querySelector('.pokemon_ability');
 const pokemonInfo = document.querySelector('.pokemon_informations');
+const pokemonNext = document.querySelector('.arrow_next');
+const pokemonPrev = document.querySelector('.arrow_prev');
 
 async function fetchPokemon(pokemon){
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
@@ -29,6 +31,9 @@ async function fetchPokemon(pokemon){
     }
    
 }
+
+let currentPokemon = 1;
+
 async function showPokemon(pokemon){
     pokemonName.innerHTML = 'Loading...'
     const data = await fetchPokemon(pokemon);
@@ -49,13 +54,22 @@ searchBox.addEventListener('submit',(e)=>{
     showPokemon(inputPokemon.value.toLowerCase());
 })
 
-showPokemon('1');
+showPokemon(currentPokemon);
+
 
 searchBtn.addEventListener('click',()=>{
     icon.classList.toggle('fa-x')
     searchBox.classList.toggle('active');
     inputPokemon.classList.toggle('active');
     inputPokemon.value = '';
+})
+pokemonNext.addEventListener('click',()=>{
+    currentPokemon ++;
+    showPokemon(currentPokemon);
+})
+pokemonPrev.addEventListener('click',()=>{
+    currentPokemon --;
+    showPokemon(currentPokemon);
 })
 
 function addZero(id){

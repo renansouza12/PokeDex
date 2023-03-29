@@ -117,6 +117,7 @@ body {
   font-weight: 400;
 }
 .container .main .about .pokemon_image {
+  user-select: none;
   width: 25rem;
   height: auto;
 }
@@ -128,7 +129,7 @@ body {
   cursor: pointer;
   transform: translateY(-50px);
 }
-.container .arrows .arrow_left {
+.container .arrows .arrow_prev {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3rem;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
@@ -138,7 +139,7 @@ body {
   height: 5rem;
   width: 5rem;
 }
-.container .arrows .arrow_right {
+.container .arrows .arrow_next {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3rem;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
