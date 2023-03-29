@@ -46,6 +46,8 @@ body {
   border-radius: 3rem;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   backdrop-filter: blur(5px);
+  display: grid;
+  place-content: center;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .container .nav .search_box .input_pokemon::placeholder {
@@ -61,12 +63,12 @@ body {
   top: 0%;
   height: 3.5rem;
   width: 3.5rem;
-  display: grid;
-  place-content: center;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
+  border-radius: 3rem;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
   backdrop-filter: blur(5px);
+  display: grid;
+  place-content: center;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .container .nav .search_box.active {
@@ -117,6 +119,34 @@ body {
 .container .main .about .pokemon_image {
   width: 25rem;
   height: auto;
+}
+.container .arrows {
+  display: flex;
+  justify-content: space-between;
+  color: #f8f9fa;
+  font-size: 3rem;
+  cursor: pointer;
+  transform: translateY(-50px);
+}
+.container .arrows .arrow_left {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3rem;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-content: center;
+  height: 5rem;
+  width: 5rem;
+}
+.container .arrows .arrow_right {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3rem;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-content: center;
+  height: 5rem;
+  width: 5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

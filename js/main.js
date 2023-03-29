@@ -18,14 +18,14 @@ async function fetchPokemon(pokemon){
         const data = await response.json();
          pokemonImage.style.display = 'block';
          pokemonInfo.style.display = 'block';  
-        return data;
-       
+         pokemonId.style.fontSize = '15rem';
+        return data;  
     }
     else{
         pokemonId.innerHTML = 'Not Found 😴'
+        pokemonId.style.fontSize = '11rem';
         pokemonImage.style.display = 'none';
         pokemonInfo.style.display = 'none';  
-
     }
    
 }

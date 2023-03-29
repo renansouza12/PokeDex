@@ -14,7 +14,14 @@ body {
     display: flex;
     justify-content: center;
 }
-
+@mixin theme(){
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3rem;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    backdrop-filter: blur(5px);   
+    display: grid;
+    place-content: center;
+}
 .container {
     width: 50%;
 
@@ -36,9 +43,7 @@ body {
             .fa-solid {
                 font-size: 1.5rem;
                 color: base.$white;
-
             }
-
 
             .input_pokemon {
                 width: 100%;
@@ -48,10 +53,7 @@ body {
                 background-color: transparent;
                 color: base.$white;
                 padding: 1rem 2rem;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 3rem;
-                box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-                backdrop-filter: blur(5px);
+                @include theme();
                 transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             }
 
@@ -70,12 +72,7 @@ body {
                 top: 0%;
                 height: 3.5rem;
                 width: 3.5rem;
-                display: grid;
-                place-content: center;
-                background: rgba(255, 255, 255, 0.2);
-                border-radius: 50%;
-                box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-                backdrop-filter: blur(5px);
+               @include theme();
                 transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
             }
@@ -140,6 +137,25 @@ body {
                 height: auto;
             }
 
+        }
+    }
+    .arrows{
+        display: flex;
+        justify-content: space-between;
+        color: base.$white;
+        font-size: 3rem;
+        cursor: pointer;
+        transform: translateY(-50px);
+
+        .arrow_left{
+            @include theme();
+            height: 5rem;
+            width: 5rem;
+        }
+        .arrow_right{
+            @include theme();
+            height: 5rem;
+            width: 5rem;
         }
     }
 }
