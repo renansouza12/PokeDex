@@ -43,17 +43,14 @@ let currentPokemon = 1;
 async function showPokemon(pokemon){
     pokemonName.innerHTML = 'Loading...'
     const data = await fetchPokemon(pokemon);
-    const {name, id, height, weight}= data;
-
+    const {name, id, height, weight}= data; 
     pokemonName.innerHTML = name;
-    pokemonId.innerHTML = addZero(id);
+    pokemonId.innerHTML = addZero(id); 
     pokemonHeight.innerHTML = height;
     pokemonWeight.innerHTML = weight;
-    
     pokemonImage.src = data['sprites']['other']['home']['front_default'];
     pokemonAbility.innerHTML = data['abilities']['0']['ability']['name'];
-    
-
+    currentPokemon = id;
 }
 searchBox.addEventListener('submit',(e)=>{
     e.preventDefault();
