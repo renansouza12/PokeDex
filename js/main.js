@@ -28,11 +28,11 @@ async function fetchPokemon(pokemon){
     }
     else{
         pokemonId.innerHTML = 'Not Found 😴'
-        pokemonId.style.fontSize = '11rem';
+        pokemonId.style.fontSize = '9rem';
         pokemonImage.style.display = 'none';
         pokemonInfo.style.display = 'none';  
         pokemonPrev.style.opacity = '0';
-        pokemonNext.style.transform = 'translateY(-25rem)';
+        pokemonNext.style.transform = 'translateY(-5rem)';
         
     }
    
@@ -43,14 +43,14 @@ let currentPokemon = 1;
 async function showPokemon(pokemon){
     pokemonName.innerHTML = 'Loading...'
     const data = await fetchPokemon(pokemon);
-    const {name, id, height, weight}= data;
-
+    const {name, id, height, weight}= data; 
     pokemonName.innerHTML = name;
-    pokemonId.innerHTML = addZero(id);
+    pokemonId.innerHTML = addZero(id); 
     pokemonHeight.innerHTML = height;
     pokemonWeight.innerHTML = weight;
     pokemonImage.src = data['sprites']['other']['home']['front_default'];    
     pokemonAbility.innerHTML = data['abilities']['0']['ability']['name']; 
+    currentPokemon = id;
 }
 searchBox.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -62,7 +62,7 @@ showPokemon(currentPokemon);
 
 
 searchBtn.addEventListener('click',()=>{
-    icon.classList.toggle('fa-x')
+    icon.classList.toggle('fa-x');
     searchBox.classList.toggle('active');
     inputPokemon.classList.toggle('active');
     inputPokemon.value = '';
