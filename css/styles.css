@@ -96,6 +96,7 @@ body {
   top: 30%;
   right: 0%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 .container .main .about .pokemon_informations .pokemon_name {
@@ -121,13 +122,83 @@ body {
   width: 25rem;
   height: auto;
 }
+.container .main .pokemon_description {
+  text-align: center;
+  color: #f8f9fa;
+}
+.container .main .pokemon_description .hp_txt {
+  text-align: end;
+}
+.container .main .pokemon_description .pokemon_health {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main .pokemon_description .pokemon_health .hp_bar {
+  transform: rotate(180deg);
+  width: 10rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.container .main .pokemon_description .pokemon_health .hp_bar .hp {
+  width: 90%;
+  background: green;
+  height: 100%;
+  border-radius: 1rem;
+}
+.container .main .pokemon_description .pokemon_attack {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main .pokemon_description .pokemon_attack .attack_bar {
+  transform: rotate(180deg);
+  width: 10rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.container .main .pokemon_description .pokemon_attack .attack_bar .attack {
+  width: 90%;
+  background: green;
+  height: 100%;
+  border-radius: 1rem;
+}
+.container .main .pokemon_description .pokemon_defense {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main .pokemon_description .pokemon_defense .denfese_bar {
+  transform: rotate(180deg);
+  width: 10rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.container .main .pokemon_description .pokemon_defense .denfese_bar .denfese {
+  width: 90%;
+  background: green;
+  height: 100%;
+  border-radius: 1rem;
+}
 .container .arrows {
   display: flex;
   justify-content: space-between;
   color: #f8f9fa;
   font-size: 2rem;
   cursor: pointer;
-  transform: translateY(-20px);
+  transform: translateY(70px);
 }
 .container .arrows .arrow_prev {
   background: rgba(255, 255, 255, 0.2);

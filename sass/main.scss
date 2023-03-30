@@ -22,6 +22,27 @@ body {
     display: grid;
     place-content: center;
 }
+@mixin textCenter(){
+    display: flex;
+    align-items: center;
+}
+
+@mixin pokemon_bar(){
+    transform: rotate(180deg);
+    width: 10rem;    
+    height: 0.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: inset 4px 2px 0px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+@mixin pokemon_hp(){
+    width: 90%;
+    background: green;
+    height: 100%;
+    border-radius: 1rem;
+}
 .container {
     width: 50%;
 
@@ -107,6 +128,7 @@ body {
             top: 30%;
             right: 0%;
             display: flex;
+            justify-content: space-around;
             align-items: center;
 
             .pokemon_informations {
@@ -138,6 +160,47 @@ body {
             }
 
         }
+        .pokemon_description{
+            text-align: center;
+            color: base.$white;
+          
+            .hp_txt{
+                text-align: end
+               }
+
+            .pokemon_health{
+               @include textCenter();
+                gap: 1rem;
+                 .hp_bar{
+                    @include pokemon_bar();
+                    .hp{
+                        @include pokemon_hp();
+                    }
+                   
+                }
+
+            }
+            .pokemon_attack{
+                @include textCenter();
+                 gap: 1rem;
+                  .attack_bar{
+                     @include pokemon_bar();
+                     .attack{
+                         @include pokemon_hp();
+                     }
+                 }
+             }
+             .pokemon_defense{
+                @include textCenter();
+                 gap: 1rem;
+                  .denfese_bar{
+                     @include pokemon_bar();
+                     .denfese{
+                         @include pokemon_hp();
+                     }
+                 }
+             }
+        }
     }
     .arrows{
         display: flex;
@@ -145,7 +208,7 @@ body {
         color: base.$white;
         font-size: 2rem;
         cursor: pointer;
-        transform: translateY(-20px);
+        transform: translateY(70px);
 
         .arrow_prev{
             @include theme();

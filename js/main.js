@@ -15,6 +15,7 @@ const arrows = document.querySelector('.arrows')
 const pokemonNext = document.querySelector('.arrow_next');
 const pokemonPrev = document.querySelector('.arrow_prev');
 
+
 async function fetchPokemon(pokemon){
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     if(response.status == 200){
@@ -51,6 +52,10 @@ async function showPokemon(pokemon){
     pokemonImage.src = data['sprites']['other']['home']['front_default'];    
     pokemonAbility.innerHTML = data['abilities']['0']['ability']['name']; 
     currentPokemon = id;
+
+    document.querySelector('.hp_number').innerHTML = Math.floor(Math.random() * data.stats[0].base_stat + 1);
+    document.querySelector('.attack_number').innerHTML = Math.floor(Math.random() * data.stats[1].base_stat + 1);
+    document.querySelector('.defense_number').innerHTML = Math.floor(Math.random() * data.stats[2].base_stat + 1);
 }
 searchBox.addEventListener('submit',(e)=>{
     e.preventDefault();
