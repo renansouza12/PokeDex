@@ -49,11 +49,8 @@ async function showPokemon(pokemon){
     pokemonId.innerHTML = addZero(id);
     pokemonHeight.innerHTML = height;
     pokemonWeight.innerHTML = weight;
-    
-    pokemonImage.src = data['sprites']['other']['home']['front_default'];
-    pokemonAbility.innerHTML = data['abilities']['0']['ability']['name'];
-    
-
+    pokemonImage.src = data['sprites']['other']['home']['front_default'];    
+    pokemonAbility.innerHTML = data['abilities']['0']['ability']['name']; 
 }
 searchBox.addEventListener('submit',(e)=>{
     e.preventDefault();
