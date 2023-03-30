@@ -119,7 +119,7 @@ body {
 }
 .container .main .about .pokemon_image {
   user-select: none;
-  width: 25rem;
+  width: 20rem;
   height: auto;
 }
 .container .main .pokemon_description {

@@ -25,6 +25,7 @@ body {
 @mixin textCenter(){
     display: flex;
     align-items: center;
+    
 }
 
 @mixin pokemon_bar(){
@@ -155,7 +156,7 @@ body {
 
             .pokemon_image{
                 user-select: none;
-                width: 25rem;
+                width: 20rem;
                 height: auto;
             }
 
