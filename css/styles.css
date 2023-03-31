@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  width: 60%;
+  width: 67%;
 }
 .container .nav {
   padding: 1rem 0;
@@ -126,8 +126,8 @@ body {
   text-align: center;
   color: #f8f9fa;
 }
-.container .main .pokemon_description .hp_txt {
-  text-align: end;
+.container .main .pokemon_description .txt {
+  word-break: normal;
 }
 .container .main .pokemon_description .pokemon_health {
   display: flex;
@@ -146,9 +146,10 @@ body {
 }
 .container .main .pokemon_description .pokemon_health .hp_bar .hp {
   width: 90%;
-  background: green;
+  background: #007f5f;
   height: 100%;
   border-radius: 1rem;
+  box-shadow: inset 0px -1px 0px #04b589;
 }
 .container .main .pokemon_description .pokemon_attack {
   display: flex;
@@ -167,9 +168,10 @@ body {
 }
 .container .main .pokemon_description .pokemon_attack .attack_bar .attack {
   width: 90%;
-  background: green;
+  background: #007f5f;
   height: 100%;
   border-radius: 1rem;
+  box-shadow: inset 0px -1px 0px #04b589;
 }
 .container .main .pokemon_description .pokemon_defense {
   display: flex;
@@ -188,9 +190,76 @@ body {
 }
 .container .main .pokemon_description .pokemon_defense .denfese_bar .denfese {
   width: 90%;
-  background: green;
+  background: #007f5f;
   height: 100%;
   border-radius: 1rem;
+  box-shadow: inset 0px -1px 0px #04b589;
+}
+.container .main .pokemon_description .pokemon_specialAtk {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main .pokemon_description .pokemon_specialAtk .specialAtk_bar {
+  transform: rotate(180deg);
+  width: 10rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.container .main .pokemon_description .pokemon_specialAtk .specialAtk_bar .specialAtk {
+  width: 90%;
+  background: #007f5f;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: inset 0px -1px 0px #04b589;
+}
+.container .main .pokemon_description .pokemon_specialDefense {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main .pokemon_description .pokemon_specialDefense .specialDefense_bar {
+  transform: rotate(180deg);
+  width: 10rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.container .main .pokemon_description .pokemon_specialDefense .specialDefense_bar .specialDefense {
+  width: 90%;
+  background: #007f5f;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: inset 0px -1px 0px #04b589;
+}
+.container .main .pokemon_description .pokemon_speed {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .main .pokemon_description .pokemon_speed .speed_bar {
+  transform: rotate(180deg);
+  width: 10rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.container .main .pokemon_description .pokemon_speed .speed_bar .speed {
+  width: 90%;
+  background: #007f5f;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: inset 0px -1px 0px #04b589;
 }
 .container .arrows {
   display: flex;

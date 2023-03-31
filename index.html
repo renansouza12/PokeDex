@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/pokebola.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/styles.css">
-    <title>PokeDex</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="nav">
 
-        <form class="search_box">
-          <input type="text" name="input_pokemom"  class="input_pokemon" placeholder="Enter a name or number">
-          <div  class="btn search_btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/pokebola.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <title>PokeDex</title>
+</head>
 
-        <h1>PokeDex</h1>
-      </header>
+<body>
+  <div class="container">
+    <header class="nav">
 
-      <main class="main">
-        <div class="pokemon_id">#001</div>
-
-        <div class="about">
-          <div class="pokemon_informations">
-            <div class="pokemon_name"></div>
-            <div class="pokemon_skills">
-              <div>Height<p class="pokemon_height"></p></div>
-              <div>Weight<p class="pokemon_weight"></p></div>
-              <div>Ability<p class="pokemon_ability"></p></div></div>
-            </div>
-
-          <img src=""  alt="pokemon_image" class="pokemon_image">
-
-            <div class="pokemon_description">
-              <h1>Stats</h1>
-
-              <div class="pokemon_health">
-                <p class="hp_number"></p>
-                <div class="hp_bar">
-                  <div class="hp"></div>
-                </div>
-              <p class="hp_txt">HP</p>
-              </div>
-
-              <div class="pokemon_attack">
-                <p class="attack_number"></p>
-                <div class="attack_bar">
-                  <div class="attack"></div>
-                </div>
-                <p class="attack_txt">Attack</p>
-              </div>
-
-              <div class="pokemon_defense">
-                <p class="defense_number"></p>
-                <div class="denfese_bar">
-                  <div class="denfese"></div>
-                </div>
-                <p class="defense_txt">Defense</p>
-              </div>
-              
-            </div>
+      <form class="search_box">
+        <input type="text" name="input_pokemom" class="input_pokemon" placeholder="Enter a name or number">
+        <div class="btn search_btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-       
-      </main>
-      <div class="arrows">
-        <div class="arrow_prev"><i class="fa-solid fa-chevron-left"></i></div>
-        <div class="arrow_next"><i class="fa-solid fa-chevron-right"></i></div>
+      </form>
+
+      <h1>PokeDex</h1>
+    </header>
+
+    <main class="main">
+      <div class="pokemon_id">#001</div>
+
+      <div class="about">
+        <div class="pokemon_informations">
+          <div class="pokemon_name"></div>
+          <div class="pokemon_skills">
+            <div>Height<p class="pokemon_height"></p>
+            </div>
+            <div>Weight<p class="pokemon_weight"></p>
+            </div>
+            <div>Ability<p class="pokemon_ability"></p>
+            </div>
+          </div>
+        </div>
+
+        <img src="" alt="pokemon_image" class="pokemon_image">
+
+        <div class="pokemon_description">
+          <h1>Stats</h1>
+          <div class="pokemon_health">
+            <p class="hp_number"></p>
+            <div class="hp_bar">
+              <div class="hp"></div>
+            </div>
+            <p class="hp_txt">HP</p>
+          </div>
+          <div class="pokemon_attack">
+            <p class="attack_number"></p>
+            <div class="attack_bar">
+              <div class="attack"></div>
+            </div>
+            <p class="attack_txt">Attack</p>
+          </div>
+          <div class="pokemon_defense">
+            <p class="defense_number"></p>
+            <div class="denfese_bar">
+              <div class="denfese"></div>
+            </div>
+            <p class="defense_txt">Defense</p>
+          </div>
+          <div class="pokemon_specialAtk">
+            <p class="specialAtk_number"></p>
+            <div class="specialAtk_bar">
+              <div class="specialAtk"></div>
+            </div>
+            <p class=" specialAtk_txt">Especial Attack</p>
+          </div>
+          <div class="pokemon_specialDefense">
+            <p class="specialDefense_number"></p>
+            <div class="specialDefense_bar">
+              <div class="specialDefense"></div>
+            </div>
+            <p class=" specialDefense_txt">Especial Defense</p>
+          </div>
+          <div class="pokemon_speed">
+            <p class="speed_number"></p>
+            <div class="speed_bar">
+              <div class="speed"></div>
+            </div>
+            <p class=" speed_txt">Speed</p>
+          </div>
+        </div>
+
       </div>
+    </main>
+  
+
+ 
+    <div class="arrows">
+      <div class="arrow_prev"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="arrow_next"><i class="fa-solid fa-chevron-right"></i></div>
     </div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

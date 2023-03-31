@@ -53,14 +53,33 @@ async function showPokemon(pokemon) {
     pokemonAbility.innerHTML = data['abilities']['0']['ability']['name'];
     currentPokemon = id;
 
-
     const hpNumber = Math.floor(Math.random() * data.stats[0].base_stat + 1);
     const attackNumber = Math.floor(Math.random() * data.stats[1].base_stat + 1);
     const defenseNumber = Math.floor(Math.random() * data.stats[2].base_stat + 1);
+    const specialAtkNumber = Math.floor(Math.random() * data.stats[3].base_stat + 1);
+    const specialDefenseNumber = Math.floor(Math.random() * data.stats[4].base_stat + 1);
+    const speedNumber = Math.floor(Math.random() * data.stats[5].base_stat + 1);
 
     document.querySelector('.hp_number').innerHTML = hpNumber < 10 ? '0' + hpNumber : hpNumber;
     document.querySelector('.attack_number').innerHTML = attackNumber < 10 ? '0' + attackNumber : attackNumber;
     document.querySelector('.defense_number').innerHTML = defenseNumber < 10 ? '0' + defenseNumber : defenseNumber;
+    document.querySelector('.specialAtk_number').innerHTML = specialAtkNumber < 10 ? '0' + specialAtkNumber : specialAtkNumber;
+    document.querySelector('.specialDefense_number').innerHTML = specialDefenseNumber < 10 ? '0' + specialDefenseNumber : specialDefenseNumber;
+    document.querySelector('.speed_number').innerHTML = specialDefenseNumber < 10 ? '0' + specialDefenseNumber : specialDefenseNumber;  
+
+    const hp = document.querySelector('.hp');
+    const attack = document.querySelector('.attack');
+    const defense =  document.querySelector('.denfese');
+    const specialAtk = document.querySelector('.specialAtk');
+    const specialDefense = document.querySelector('.specialDefense');
+    const speed = document.querySelector('.speed');
+    hp.style.width =  hpNumber + '%';
+    attack.style.width =  attackNumber + '%';
+    defense.style.width =  defenseNumber + '%';
+    specialAtk.style.width = specialAtkNumber + '%';
+    specialDefense.style.width = specialDefenseNumber + '%';
+    speed.style.width = speedNumber + '%';
+
 }
 searchBox.addEventListener('submit', (e) => {
     e.preventDefault();

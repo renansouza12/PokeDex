@@ -40,12 +40,13 @@ body {
 }
 @mixin pokemon_hp(){
     width: 90%;
-    background: green;
+    background: #007f5f;
     height: 100%;
     border-radius: 1rem;
+    box-shadow: inset 0px -1px 0px #04b589;
 }
 .container {
-    width: 60%;
+    width: 67%;
 
     .nav {
         padding: 1rem 0;
@@ -164,9 +165,10 @@ body {
         .pokemon_description{
             text-align: center;
             color: base.$white;
-          
-            .hp_txt{
-                text-align: end
+            
+
+            .txt{
+                word-break: normal;
                }
 
             .pokemon_health{
@@ -197,6 +199,36 @@ body {
                   .denfese_bar{
                      @include pokemon_bar();
                      .denfese{
+                         @include pokemon_hp();
+                     }
+                 }
+             }
+             .pokemon_specialAtk{
+                @include textCenter();
+                 gap: 1rem;
+                  .specialAtk_bar{
+                     @include pokemon_bar();
+                     .specialAtk{
+                         @include pokemon_hp();
+                     }
+                 }
+             }
+             .pokemon_specialDefense{
+                @include textCenter();
+                 gap: 1rem;
+                  .specialDefense_bar{
+                     @include pokemon_bar();
+                     .specialDefense{
+                         @include pokemon_hp();
+                     }
+                 }
+             }
+             .pokemon_speed{
+                @include textCenter();
+                 gap: 1rem;
+                  .speed_bar{
+                     @include pokemon_bar();
+                     .speed{
                          @include pokemon_hp();
                      }
                  }
