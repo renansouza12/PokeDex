@@ -14,39 +14,43 @@ body {
     display: flex;
     justify-content: center;
 }
-@mixin theme(){
+
+@mixin theme() {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 3rem;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-    backdrop-filter: blur(5px);   
+    backdrop-filter: blur(5px);
     display: grid;
     place-content: center;
 }
-@mixin textCenter(){
+
+@mixin textCenter() {
     display: flex;
     align-items: center;
-    
+
 }
 
-@mixin pokemon_bar(){
+@mixin pokemon_bar() {
     transform: rotate(180deg);
-    width: 10rem;    
-    height: 0.5rem;
+    width: 12rem;
+    height: 0.7rem;
     background: white;
     border-radius: 1rem;
-    box-shadow: inset 4px 2px 0px rgba(0,0,0,0.1);
+    box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
 }
-@mixin pokemon_hp(){
+
+@mixin pokemon_hp() {
     width: 90%;
     background: #007f5f;
     height: 100%;
     border-radius: 1rem;
     box-shadow: inset 0px -1px 0px #04b589;
 }
+
 .container {
-    width: 67%;
+    width: 68%;
 
     .nav {
         padding: 1rem 0;
@@ -94,7 +98,7 @@ body {
                 top: 0%;
                 height: 3.5rem;
                 width: 3.5rem;
-               @include theme();
+                @include theme();
                 transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
             }
@@ -130,24 +134,27 @@ body {
             top: 30%;
             right: 0%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between ;
             align-items: center;
 
             .pokemon_informations {
+                width: 15rem;
                 .pokemon_name {
                     font-size: 2.5rem;
                     text-transform: capitalize;
                     color: base.$white;
                     font-weight: 700;
                 }
-                .pokemon_skills{
+
+                .pokemon_skills {
                     display: flex;
                     justify-content: space-between;
                     gap: 1rem;
                     text-align: center;
-                    font-weight:700;
+                    font-weight: 700;
                     color: base.$white;
-                    p{
+
+                    p {
                         margin-top: 1rem;
                         font-weight: 400;
                     }
@@ -155,103 +162,125 @@ body {
 
             }
 
-            .pokemon_image{
+            .pokemon_image {
                 user-select: none;
                 width: 20rem;
                 height: auto;
             }
 
         }
-        .pokemon_description{
+
+        .pokemon_description {
+            width: 24rem;
             text-align: center;
             color: base.$white;
-            
+        
 
-            .txt{
-                word-break: normal;
-               }
 
-            .pokemon_health{
-               @include textCenter();
+            .pokemon_health {
+                @include textCenter();
                 gap: 1rem;
-                 .hp_bar{
+
+                .hp_bar {
                     @include pokemon_bar();
-                    .hp{
+
+                    .hp {
                         @include pokemon_hp();
                     }
-                   
+
                 }
 
             }
-            .pokemon_attack{
+
+            .pokemon_attack {
                 @include textCenter();
-                 gap: 1rem;
-                  .attack_bar{
-                     @include pokemon_bar();
-                     .attack{
-                         @include pokemon_hp();
-                     }
-                 }
-             }
-             .pokemon_defense{
+                gap: 1rem;
+
+                .attack_bar {
+                    @include pokemon_bar();
+
+                    .attack {
+                        @include pokemon_hp();
+                    }
+                }
+            }
+
+            .pokemon_defense {
                 @include textCenter();
-                 gap: 1rem;
-                  .denfese_bar{
-                     @include pokemon_bar();
-                     .denfese{
-                         @include pokemon_hp();
-                     }
-                 }
-             }
-             .pokemon_specialAtk{
+                gap: 1rem;
+
+                .denfese_bar {
+                    @include pokemon_bar();
+
+                    .denfese {
+                        @include pokemon_hp();
+                    }
+                }
+            }
+
+            .pokemon_specialAtk {
                 @include textCenter();
-                 gap: 1rem;
-                  .specialAtk_bar{
-                     @include pokemon_bar();
-                     .specialAtk{
-                         @include pokemon_hp();
-                     }
-                 }
-             }
-             .pokemon_specialDefense{
+                gap: 1rem;
+
+                .specialAtk_bar {
+                    @include pokemon_bar();
+
+                    .specialAtk {
+                        @include pokemon_hp();
+                    }
+                }
+            }
+
+            .pokemon_specialDefense {
                 @include textCenter();
-                 gap: 1rem;
-                  .specialDefense_bar{
-                     @include pokemon_bar();
-                     .specialDefense{
-                         @include pokemon_hp();
-                     }
-                 }
-             }
-             .pokemon_speed{
+                gap: 1rem;
+
+                .specialDefense_bar {
+                    @include pokemon_bar();
+
+                    .specialDefense {
+                        @include pokemon_hp();
+                    }
+                }
+            }
+
+            .pokemon_speed {
                 @include textCenter();
-                 gap: 1rem;
-                  .speed_bar{
-                     @include pokemon_bar();
-                     .speed{
-                         @include pokemon_hp();
-                     }
-                 }
-             }
+                gap: 1rem;
+
+                .speed_bar {
+                    @include pokemon_bar();
+
+                    .speed {
+                        @include pokemon_hp();
+                    }
+                }
+            }
         }
     }
-    .arrows{
-        display: flex;
-        justify-content: space-between;
-        color: base.$white;
-        font-size: 2rem;
-        cursor: pointer;
-        transform: translateY(70px);
 
-        .arrow_prev{
-            @include theme();
-            height: 4rem;
-            width: 4rem;
-        }
-        .arrow_next{
-            @include theme();
-            height: 4rem;
-            width: 4rem;
-        }
+    
+}
+.arrows {
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top:50%;
+    display: flex;
+    justify-content: space-between;
+    color: base.$white;
+    font-size: 2rem;
+    cursor: pointer;
+
+    .arrow_prev {
+        @include theme();
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .arrow_next {
+        @include theme();
+        height: 4rem;
+        width: 4rem;
     }
 }
