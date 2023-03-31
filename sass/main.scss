@@ -27,7 +27,7 @@ body {
 @mixin textCenter() {
     display: flex;
     align-items: center;
-
+    gap: 1rem;
 }
 
 @mixin pokemon_bar() {
@@ -50,7 +50,7 @@ body {
 }
 
 .container {
-    width: 68%;
+    width: 60%;
 
     .nav {
         padding: 1rem 0;
@@ -132,9 +132,9 @@ body {
         .about {
             position: absolute;
             top: 30%;
-            right: 0%;
+            right: -15%;
             display: flex;
-            justify-content: space-between ;
+            justify-content: space-around ;
             align-items: center;
 
             .pokemon_informations {
@@ -179,7 +179,7 @@ body {
 
             .pokemon_health {
                 @include textCenter();
-                gap: 1rem;
+                
 
                 .hp_bar {
                     @include pokemon_bar();
@@ -194,7 +194,7 @@ body {
 
             .pokemon_attack {
                 @include textCenter();
-                gap: 1rem;
+           
 
                 .attack_bar {
                     @include pokemon_bar();
@@ -207,7 +207,7 @@ body {
 
             .pokemon_defense {
                 @include textCenter();
-                gap: 1rem;
+     
 
                 .denfese_bar {
                     @include pokemon_bar();
@@ -220,7 +220,7 @@ body {
 
             .pokemon_specialAtk {
                 @include textCenter();
-                gap: 1rem;
+       
 
                 .specialAtk_bar {
                     @include pokemon_bar();
@@ -233,7 +233,7 @@ body {
 
             .pokemon_specialDefense {
                 @include textCenter();
-                gap: 1rem;
+           
 
                 .specialDefense_bar {
                     @include pokemon_bar();
@@ -246,7 +246,6 @@ body {
 
             .pokemon_speed {
                 @include textCenter();
-                gap: 1rem;
 
                 .speed_bar {
                     @include pokemon_bar();
@@ -282,5 +281,117 @@ body {
         @include theme();
         height: 4rem;
         width: 4rem;
+    }
+}   
+
+@media (max-width: 320px) {
+    .container{
+        width: 100%;
+        .nav{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+          
+        }
+        .main{
+            .pokemon_id{
+                font-size: 10rem;
+            }
+            .about{
+                width: 100%;
+                top: -5%;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                
+
+                .pokemon_informations{
+                    text-align: center;
+
+                    .pokemon_skills{
+                            h3{
+                                
+                                font-size: 1.1rem;
+                            }
+                            p{
+                                font-size: 1.1rem;
+                            }
+                    }
+                }
+                .pokemon_image{
+                    width: 16rem;
+                }
+                .pokemon_description{
+                    margin-top:1rem ;
+                    width: 100%;
+                    padding: 0.5rem;
+
+                    P{
+                        font-weight: 700;
+                        font-size: 0.8rem;
+                    }
+                  
+                }
+                
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .container{
+        width: 100%;
+        .nav{   
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+
+            .search_box.active {
+                width: 90%;
+            }
+        }
+        .main{
+            .pokemon_id{
+                font-size: 13rem;
+            }
+            .about{
+                width: 100%;
+                top: 0%;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                
+
+                .pokemon_informations{
+                    text-align: center;
+
+                    .pokemon_skills{
+                            h3{
+                                
+                                font-size: 1.1rem;
+                            }
+                            p{
+                                font-size: 1.1rem;
+                            }
+                    }
+                }
+                .pokemon_image{
+                    width:18rem;
+                }
+                .pokemon_description{
+                    width: 100%;
+                    padding: 0 1rem;
+
+                    P{
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                    }
+                  
+                }
+                
+            }
+        }
     }
 }

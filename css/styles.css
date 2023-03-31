@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  width: 68%;
+  width: 60%;
 }
 .container .nav {
   padding: 1rem 0;
@@ -94,9 +94,9 @@ body {
 .container .main .about {
   position: absolute;
   top: 30%;
-  right: 0%;
+  right: -15%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .container .main .about .pokemon_informations {
@@ -293,6 +293,94 @@ body {
   place-content: center;
   height: 4rem;
   width: 4rem;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+  }
+  .container .nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+  }
+  .container .main .pokemon_id {
+    font-size: 10rem;
+  }
+  .container .main .about {
+    width: 100%;
+    top: -5%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .main .about .pokemon_informations {
+    text-align: center;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills h3 {
+    font-size: 1.1rem;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills p {
+    font-size: 1.1rem;
+  }
+  .container .main .about .pokemon_image {
+    width: 16rem;
+  }
+  .container .main .about .pokemon_description {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .container .main .about .pokemon_description P {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .container .nav {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+  }
+  .container .nav .search_box.active {
+    width: 90%;
+  }
+  .container .main .pokemon_id {
+    font-size: 13rem;
+  }
+  .container .main .about {
+    width: 100%;
+    top: 0%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .main .about .pokemon_informations {
+    text-align: center;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills h3 {
+    font-size: 1.1rem;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills p {
+    font-size: 1.1rem;
+  }
+  .container .main .about .pokemon_image {
+    width: 18rem;
+  }
+  .container .main .about .pokemon_description {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .container .main .about .pokemon_description P {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

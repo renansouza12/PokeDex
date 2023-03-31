@@ -14,21 +14,22 @@ const pokemonInfo = document.querySelector('.pokemon_informations');
 const arrows = document.querySelector('.arrows')
 const pokemonNext = document.querySelector('.arrow_next');
 const pokemonPrev = document.querySelector('.arrow_prev');
-
+const description = document.querySelector('.pokemon_description');
 
 async function fetchPokemon(pokemon) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     if (response.status == 200) {
         const data = await response.json();
+        description.style.display = 'block';
         pokemonImage.style.display = 'block';
         pokemonInfo.style.display = 'block';
-        pokemonId.style.fontSize = '15rem';
         pokemonPrev.style.opacity = '1';
         pokemonNext.style.transform = 'translateY(0)';
         return data;
     }
     else {
-        pokemonId.innerHTML = 'Not Found 😴'
+        pokemonId.innerHTML = 'Not Found 😴';
+        description.style.display = 'none';
         pokemonId.style.fontSize = '9rem';
         pokemonImage.style.display = 'none';
         pokemonInfo.style.display = 'none';
