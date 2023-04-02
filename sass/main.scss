@@ -33,20 +33,21 @@ body {
 @mixin pokemon_bar() {
     transform: rotate(180deg);
     width: 12rem;
-    height: 0.7rem;
+    height: 1rem;
     background: white;
     border-radius: 1rem;
     box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    margin: 0.5rem 0;
 }
 
-@mixin pokemon_hp() {
+@mixin pokemon_hp($background:#007f5f, $shasow:#04b589) {
     width: 90%;
-    background: #007f5f;
+    background-color: $background;
     height: 100%;
     border-radius: 1rem;
-    box-shadow: inset 0px -1px 0px #04b589;
+    box-shadow: inset 0px -1px 0px $shasow;
 }
 
 .container {
@@ -120,19 +121,18 @@ body {
         position: relative;
 
         .pokemon_id {
-            font-size: 15rem;
+            font-size: 20rem;
             text-align: center;
             color: base.$gray;
             opacity: 0.5;
             font-weight: 700;
-            pointer-events: none;
             user-select: none;
         }
 
         .about {
             position: absolute;
             top: 30%;
-            right: -15%;
+            left: 0%;
             display: flex;
             justify-content: space-around ;
             align-items: center;
@@ -164,7 +164,7 @@ body {
 
             .pokemon_image {
                 user-select: none;
-                width: 20rem;
+                width: 25rem;
                 height: auto;
             }
 
@@ -175,7 +175,9 @@ body {
             text-align: center;
             color: base.$white;
         
-
+            p{
+                font-size: 1.1rem
+            }
 
             .pokemon_health {
                 @include textCenter();
@@ -185,7 +187,7 @@ body {
                     @include pokemon_bar();
 
                     .hp {
-                        @include pokemon_hp();
+                        @include pokemon_hp($background:#bd1f36, $shasow:#e01e37);
                     }
 
                 }
@@ -200,7 +202,7 @@ body {
                     @include pokemon_bar();
 
                     .attack {
-                        @include pokemon_hp();
+                        @include pokemon_hp($background:#faa307, $shasow:#ffba08);
                     }
                 }
             }
@@ -213,7 +215,7 @@ body {
                     @include pokemon_bar();
 
                     .denfese {
-                        @include pokemon_hp();
+                        @include pokemon_hp($background:#0077b6, $shasow:#0096c7);
                     }
                 }
             }
@@ -226,7 +228,7 @@ body {
                     @include pokemon_bar();
 
                     .specialAtk {
-                        @include pokemon_hp();
+                        @include pokemon_hp($background: #fecf3e, $shasow:#fff056);
                     }
                 }
             }
@@ -251,7 +253,7 @@ body {
                     @include pokemon_bar();
 
                     .speed {
-                        @include pokemon_hp();
+                        @include pokemon_hp($background:#90e0ef, $shasow:#ade8f4);
                     }
                 }
             }
@@ -283,115 +285,3 @@ body {
         width: 4rem;
     }
 }   
-
-@media (max-width: 320px) {
-    .container{
-        width: 100%;
-        .nav{
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            align-items: center;
-          
-        }
-        .main{
-            .pokemon_id{
-                font-size: 10rem;
-            }
-            .about{
-                width: 100%;
-                top: -5%;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                
-
-                .pokemon_informations{
-                    text-align: center;
-
-                    .pokemon_skills{
-                            h3{
-                                
-                                font-size: 1.1rem;
-                            }
-                            p{
-                                font-size: 1.1rem;
-                            }
-                    }
-                }
-                .pokemon_image{
-                    width: 16rem;
-                }
-                .pokemon_description{
-                    margin-top:1rem ;
-                    width: 100%;
-                    padding: 0.5rem;
-
-                    P{
-                        font-weight: 700;
-                        font-size: 0.8rem;
-                    }
-                  
-                }
-                
-            }
-        }
-    }
-}
-@media (max-width: 480px) {
-    .container{
-        width: 100%;
-        .nav{   
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: center;
-            gap: 1rem;
-            align-items: center;
-
-            .search_box.active {
-                width: 90%;
-            }
-        }
-        .main{
-            .pokemon_id{
-                font-size: 13rem;
-            }
-            .about{
-                width: 100%;
-                top: 0%;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                
-
-                .pokemon_informations{
-                    text-align: center;
-
-                    .pokemon_skills{
-                            h3{
-                                
-                                font-size: 1.1rem;
-                            }
-                            p{
-                                font-size: 1.1rem;
-                            }
-                    }
-                }
-                .pokemon_image{
-                    width:18rem;
-                }
-                .pokemon_description{
-                    width: 100%;
-                    padding: 0 1rem;
-
-                    P{
-                        font-weight: 700;
-                        font-size: 1.1rem;
-                    }
-                  
-                }
-                
-            }
-        }
-    }
-}
