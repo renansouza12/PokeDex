@@ -30,10 +30,10 @@ body {
     gap: 1rem;
 }
 
-@mixin pokemon_bar() {
+@mixin pokemon_bar($width:12rem, $height: 1rem) {
     transform: rotate(180deg);
-    width: 12rem;
-    height: 1rem;
+    width: $width;
+    height: $height;
     background: white;
     border-radius: 1rem;
     box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
@@ -316,6 +316,53 @@ body {
                     }
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        .nav{
+            display: flex;
+            justify-content: space-around;
+        }
+        .main{
+            .pokemon_id{
+                font-size: 18rem;
+            }
+            .about{
+                top: 20%;
+                .pokemon_informations{
+                    .pokemon_name{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                    .pokemon_skills{
+                        h3{
+                            font-size: 1rem;
+                        }
+                    }
+                    .pokemon_skills{
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .pokemon_image{
+                width: 13rem;
+                }
+                .pokemon_description{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                    P{
+                        font-size: 0.9rem;
+                    }
+                    .bar{
+                        @include    pokemon_bar($width:7rem,$height:0.8rem )
+                    }
+                }
+            }
+           
         }
     }
 }

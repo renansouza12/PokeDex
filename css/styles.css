@@ -329,5 +329,51 @@ body {
     font-size: 0.9rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .container .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .container .main .pokemon_id {
+    font-size: 18rem;
+  }
+  .container .main .about {
+    top: 20%;
+  }
+  .container .main .about .pokemon_informations .pokemon_name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills h3 {
+    font-size: 1rem;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills {
+    display: flex;
+    justify-content: center;
+  }
+  .container .main .about .pokemon_image {
+    width: 13rem;
+  }
+  .container .main .about .pokemon_description h1 {
+    font-size: 1.5rem;
+  }
+  .container .main .about .pokemon_description P {
+    font-size: 0.9rem;
+  }
+  .container .main .about .pokemon_description .bar {
+    transform: rotate(180deg);
+    width: 7rem;
+    height: 0.8rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
