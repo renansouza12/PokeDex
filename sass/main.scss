@@ -39,7 +39,7 @@ body {
     box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 
 @mixin pokemon_hp($background:#007f5f, $shasow:#04b589) {
@@ -132,7 +132,8 @@ body {
         .about {
             position: absolute;
             top: 30%;
-            left: 0%;
+            left: 0;
+            right: 0;
             display: flex;
             justify-content: space-around ;
             align-items: center;
@@ -164,19 +165,19 @@ body {
 
             .pokemon_image {
                 user-select: none;
-                width: 25rem;
+                width: 24rem;
                 height: auto;
             }
 
         }
 
-        .pokemon_description {
-            width: 24rem;
+        .pokemon_description {  
+            
             text-align: center;
             color: base.$white;
         
             p{
-                font-size: 1.1rem
+                font-size: 1rem
             }
 
             .pokemon_health {
@@ -285,3 +286,36 @@ body {
         width: 4rem;
     }
 }   
+@media screen and (max-width:480px) {
+    .container{
+        width: 100%;
+        .nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            gap: 1rem;
+        }
+        .main{
+            .pokemon_id{
+                font-size: 10rem;
+                
+            }
+            .about{
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .pokemon_image{
+                    width: 15rem;
+                }
+
+                .pokemon_description{
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
