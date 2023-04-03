@@ -375,5 +375,10 @@ body {
     margin: 0.3rem 0;
   }
 }
+@media screen and (max-width: 1024px) {
+  .container .main .about .pokemon_image {
+    width: 20rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
