@@ -285,3 +285,94 @@ body {
         width: 4rem;
     }
 }   
+@media screen and (max-width:480px) {
+    .container{
+        width: 100%;
+        .nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            gap: 1rem;
+        }
+        .main{
+            .pokemon_id{
+                font-size: 10rem;
+                
+            }
+            .about{
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                .pokemon_image{
+                    width: 15rem;
+                }
+
+                .pokemon_description{
+                    p{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        .nav{
+            display: flex;
+            justify-content: space-around;
+        }
+        .main{
+            .pokemon_id{
+                font-size: 10rem;
+            }
+            .about{
+                top: 20%;
+                .pokemon_informations{
+                    .pokemon_name{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                    .pokemon_skills{
+                        h3{
+                            font-size: 1rem;
+                        }
+                    }
+                    .pokemon_skills{
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .pokemon_image{
+                width: 13rem;
+                }
+                .pokemon_description{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                    P{
+                        font-size: 0.9rem;
+                    }
+                    .bar{
+                        @include    pokemon_bar($width:7rem,$height:0.8rem )
+                    }
+                }
+            }
+           
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    .container{
+        .main{
+            .about{ 
+                .pokemon_image{
+                    width: 20rem;
+                }
+            }
+        }
+    }
+}
