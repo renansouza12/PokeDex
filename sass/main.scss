@@ -30,16 +30,16 @@ body {
     gap: $gap;
 }
 
-@mixin pokemon_bar() {
+@mixin pokemon_bar($width:12rem, $height: 1rem) {
     transform: rotate(180deg);
-    width: 12rem;
-    height: 1rem;
+    width: $width;
+    height: $height;
     background: white;
     border-radius: 1rem;
     box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
 }
 
 @mixin pokemon_hp($background:#007f5f, $shasow:#04b589) {
@@ -132,7 +132,8 @@ body {
         .about {
             position: absolute;
             top: 30%;
-            left: 0%;
+            left: 0;
+            right: 0;
             display: flex;
             align-items: center;
 
@@ -163,19 +164,19 @@ body {
 
             .pokemon_image {
                 user-select: none;
-                width: 25rem;
+                width: 24rem;
                 height: auto;
             }
 
         }
 
-        .pokemon_description {
-            width: 24rem;
+        .pokemon_description {  
+            
             text-align: center;
             color: base.$white;
         
             p{
-                font-size: 1.1rem
+                font-size: 1rem
             }
 
             .pokemon_health {
@@ -284,55 +285,3 @@ body {
         width: 4rem;
     }
 }   
-@media (max-width:320px) {
- .container{
-    width: 100%;
-    .nav{
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-
-        .search_box{
-            .input_pokemon{
-                font-size: 0.9rem;
-            }
-
-            .search_btn{
-                height: 3rem;
-                width: 3rem;
-            }
-        }
-        .search_box.active{
-            width: 80%;
-        }
-    }
-    .main{
-        .pokemon_id{
-            font-size: 8.5rem;
-        }
-        .about{
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            .pokemon_informations{
-                width: 10rem;
-                .pokemon_name{
-                    font-size: 2rem;
-                }
-                .pokemon_skills{
-                    font-size: 0.9rem;
-                }
-            }
-            .pokemon_image{
-                width: 15rem;
-            }
-        }
-        .pokemon_description{
-            p{
-                font-size: 0.8rem;
-            }
-        }
-    }
- }   
-}

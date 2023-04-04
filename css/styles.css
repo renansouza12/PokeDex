@@ -93,7 +93,8 @@ body {
 .container .main .about {
   position: absolute;
   top: 30%;
-  left: 0%;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
 }
@@ -120,16 +121,15 @@ body {
 }
 .container .main .about .pokemon_image {
   user-select: none;
-  width: 25rem;
+  width: 24rem;
   height: auto;
 }
 .container .main .pokemon_description {
-  width: 24rem;
   text-align: center;
   color: #f8f9fa;
 }
 .container .main .pokemon_description p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .container .main .pokemon_description .pokemon_health {
   display: flex;
@@ -145,7 +145,7 @@ body {
   box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .container .main .pokemon_description .pokemon_health .hp_bar .hp {
   width: 90%;
@@ -168,7 +168,7 @@ body {
   box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .container .main .pokemon_description .pokemon_attack .attack_bar .attack {
   width: 90%;
@@ -191,7 +191,7 @@ body {
   box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .container .main .pokemon_description .pokemon_defense .denfese_bar .denfese {
   width: 90%;
@@ -214,7 +214,7 @@ body {
   box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .container .main .pokemon_description .pokemon_specialAtk .specialAtk_bar .specialAtk {
   width: 90%;
@@ -237,7 +237,7 @@ body {
   box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .container .main .pokemon_description .pokemon_specialDefense .specialDefense_bar .specialDefense {
   width: 90%;
@@ -260,7 +260,7 @@ body {
   box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .container .main .pokemon_description .pokemon_speed .speed_bar .speed {
   width: 90%;
@@ -302,12 +302,17 @@ body {
   width: 4rem;
 }
 
+<<<<<<< HEAD
 @media (max-width: 320px) {
+=======
+@media screen and (max-width: 480px) {
+>>>>>>> 63c3b4060bee37fe7ac598c899592cbb7b226d9f
   .container {
     width: 100%;
   }
   .container .nav {
     display: flex;
+<<<<<<< HEAD
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -323,6 +328,14 @@ body {
   }
   .container .main .pokemon_id {
     font-size: 8.5rem;
+=======
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container .main .pokemon_id {
+    font-size: 10rem;
+>>>>>>> 63c3b4060bee37fe7ac598c899592cbb7b226d9f
   }
   .container .main .about {
     top: 0;
@@ -330,6 +343,7 @@ body {
     flex-direction: column;
     text-align: center;
   }
+<<<<<<< HEAD
   .container .main .about .pokemon_informations {
     width: 10rem;
   }
@@ -344,6 +358,64 @@ body {
   }
   .container .main .pokemon_description p {
     font-size: 0.8rem;
+=======
+  .container .main .about .pokemon_image {
+    width: 15rem;
+  }
+  .container .main .about .pokemon_description p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .container .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .container .main .pokemon_id {
+    font-size: 18rem;
+  }
+  .container .main .about {
+    top: 20%;
+  }
+  .container .main .about .pokemon_informations .pokemon_name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills h3 {
+    font-size: 1rem;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills {
+    display: flex;
+    justify-content: center;
+  }
+  .container .main .about .pokemon_image {
+    width: 13rem;
+  }
+  .container .main .about .pokemon_description h1 {
+    font-size: 1.5rem;
+  }
+  .container .main .about .pokemon_description P {
+    font-size: 0.9rem;
+  }
+  .container .main .about .pokemon_description .bar {
+    transform: rotate(180deg);
+    width: 7rem;
+    height: 0.8rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: inset 4px 2px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container .main .about .pokemon_image {
+    width: 20rem;
+>>>>>>> 63c3b4060bee37fe7ac598c899592cbb7b226d9f
   }
 }
 
