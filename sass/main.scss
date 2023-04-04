@@ -24,10 +24,10 @@ body {
     place-content: center;
 }
 
-@mixin textCenter() {
+@mixin textCenter($gap:1rem) {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: $gap;
 }
 
 @mixin pokemon_bar() {
@@ -134,7 +134,6 @@ body {
             top: 30%;
             left: 0%;
             display: flex;
-            justify-content: space-around ;
             align-items: center;
 
             .pokemon_informations {
@@ -285,3 +284,55 @@ body {
         width: 4rem;
     }
 }   
+@media (max-width:320px) {
+ .container{
+    width: 100%;
+    .nav{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .search_box{
+            .input_pokemon{
+                font-size: 0.9rem;
+            }
+
+            .search_btn{
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+        .search_box.active{
+            width: 80%;
+        }
+    }
+    .main{
+        .pokemon_id{
+            font-size: 8.5rem;
+        }
+        .about{
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .pokemon_informations{
+                width: 10rem;
+                .pokemon_name{
+                    font-size: 2rem;
+                }
+                .pokemon_skills{
+                    font-size: 0.9rem;
+                }
+            }
+            .pokemon_image{
+                width: 15rem;
+            }
+        }
+        .pokemon_description{
+            p{
+                font-size: 0.8rem;
+            }
+        }
+    }
+ }   
+}

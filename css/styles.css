@@ -95,7 +95,6 @@ body {
   top: 30%;
   left: 0%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 .container .main .about .pokemon_informations {
@@ -301,6 +300,51 @@ body {
   place-content: center;
   height: 4rem;
   width: 4rem;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 100%;
+  }
+  .container .nav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .container .nav .search_box .input_pokemon {
+    font-size: 0.9rem;
+  }
+  .container .nav .search_box .search_btn {
+    height: 3rem;
+    width: 3rem;
+  }
+  .container .nav .search_box.active {
+    width: 80%;
+  }
+  .container .main .pokemon_id {
+    font-size: 8.5rem;
+  }
+  .container .main .about {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .container .main .about .pokemon_informations {
+    width: 10rem;
+  }
+  .container .main .about .pokemon_informations .pokemon_name {
+    font-size: 2rem;
+  }
+  .container .main .about .pokemon_informations .pokemon_skills {
+    font-size: 0.9rem;
+  }
+  .container .main .about .pokemon_image {
+    width: 15rem;
+  }
+  .container .main .pokemon_description p {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
